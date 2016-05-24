@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="CSS/bootstrap.css">
-    <link rel="stylesheet" href="CSS/style.css"
+    
     <meta charset="utf-8">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+
   <title>Tarefa 2</title>
 </head>
 
@@ -18,6 +19,15 @@ footer{
   color: white;
 }
 
+button{
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8),rgba(0, 0, 0, 0.7));
+}
+
+.buttonClear{
+  float: right;
+}
 .jumbotron{
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -39,15 +49,24 @@ footer{
 
 
     <form id="form">
-      <input type="text" class="form-control">
+      <input type="text" onkeypress="return enter(this, event);" class="form-control">
     </form>
 
     <div id="atividades">
     </div>
 
+     
+      
 
-    <footer>0 left</footer>
+
+    <footer>
+    0 left<button class="buttonClear">Limpar concluídos</button> 
+    </footer>
   </section>
+
+ 
+
+  <script src="scripts/main.js"></script>
 
 </body>
 </html>
